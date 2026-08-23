@@ -10,8 +10,8 @@ down during business hours, and moves through a defined state machine
 
 ## Tech Stack
 - Java 21
-- Spring Boot 3.x
-- Spring Security 6 (JWT) — never use deprecated `WebSecurityConfigurerAdapter`
+- Spring Boot 4.1.x
+- Spring Security 7.x (JWT) — never use deprecated `WebSecurityConfigurerAdapter`
 - SQL Server
 - Maven
 - JUnit 5 + Mockito
