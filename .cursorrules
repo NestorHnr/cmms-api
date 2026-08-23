@@ -1,0 +1,12 @@
+# .cursorrules
+
+This project follows the rules defined in CLAUDE.md. Read it before 
+generating any code.
+
+Key non-negotiables (see CLAUDE.md for full context):
+- Constructor injection only, never field injection
+- Business logic in Service layer, never in Controller
+- DTOs for all API input/output, never expose JPA entities
+- java.time only, never legacy Date/Calendar
+- No deprecated APIs (WebSecurityConfigurerAdapter, etc.)
+
