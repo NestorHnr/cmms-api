@@ -3,13 +3,13 @@ package com.cmms.api.entity;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public abstract class Equipo {
+public abstract class Equipo implements Mantenible {
     private final String codigo;
     private String nombre;
     private final LocalDate fechaInstalacion;
     private String ubicacion;
 
-    protected  Equipo(String codigo, String nombre, LocalDate fechaInstalacion, String ubicacion) {
+    protected Equipo (String codigo, String nombre, LocalDate fechaInstalacion, String ubicacion) {
         validarCodigo(codigo);
         validarNombre(nombre);
         validarFechaInstalacion(fechaInstalacion);
@@ -20,10 +20,6 @@ public abstract class Equipo {
         this.fechaInstalacion = fechaInstalacion;
         this.ubicacion = ubicacion;
     }
-
-    //metodos abstractos sobreescribibles......
-    public abstract int diasEntreMantenimientos();
-
 
     //validaciones privados no sobreescribibles......
 

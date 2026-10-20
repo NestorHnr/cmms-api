@@ -5,6 +5,7 @@ import com.cmms.api.entity.*;
 import java.util.HashSet;
 import java.util.Set;
 import java.time.LocalDate;
+import java.util.List;
 
 public class PruebaDominio {
     public static void main(String[] args) {
@@ -28,6 +29,15 @@ public class PruebaDominio {
         
         System.out.println("Dias entre mantenimientos: "+ motor.diasEntreMantenimientos());
         System.out.println("Dias entre mantenimientos: " +bomba.diasEntreMantenimientos());
+
+
+        //listas mantenible
+        List<Mantenible> mantenibles = List.of(motor, bomba);
+        for(Mantenible equipo : mantenibles){
+            System.out.println(equipo.proximoMantenimiento(LocalDate.now()));
+        }
+        
+
 
         EquipoMecanico mecanico = (EquipoMecanico) bomba;
         probarInvalido("lubricante vacio por setters", () -> mecanico.setTipoLubricante(""));
