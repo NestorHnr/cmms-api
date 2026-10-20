@@ -15,6 +15,9 @@ public class EquipoElectrico extends Equipo {
         this.amperaje = amperaje;
     }
 
+    @Override
+    public int diasEntreMantenimientos() {return 90;}
+
     //validaciones privados no sobreescribibles......
 
     private void validarVoltaje(int voltaje){

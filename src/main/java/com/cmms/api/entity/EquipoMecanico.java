@@ -15,6 +15,9 @@ public class EquipoMecanico extends Equipo {
         this.tipoLubricante = tipoLubricante;
     }
 
+    @Override
+    public int diasEntreMantenimientos() {return 30;}
+
     //validaciones provadas no sobreescribibles.....
 
     private void validarPresionmaxima(double presionMaxima){

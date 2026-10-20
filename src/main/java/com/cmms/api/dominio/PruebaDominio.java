@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.time.LocalDate;
 
-public class pruebaDominio {
+public class PruebaDominio {
     public static void main(String[] args) {
         
         Equipo motor = new EquipoElectrico("1234567890", "Motor", LocalDate.now(), "Sala de maquinas", 220, 10);
@@ -25,7 +25,9 @@ public class pruebaDominio {
 
         probarInvalido("codigo vacio", () -> new EquipoElectrico("", "Motor", LocalDate.now(), "Sala de maquinas", 220, 10));
         probarInvalido("codigo null", () -> new EquipoElectrico(null, "Motor", LocalDate.now(), "Sala de maquinas", 220, 10));
-
+        
+        System.out.println("Dias entre mantenimientos: "+ motor.diasEntreMantenimientos());
+        System.out.println("Dias entre mantenimientos: " +bomba.diasEntreMantenimientos());
 
         EquipoMecanico mecanico = (EquipoMecanico) bomba;
         probarInvalido("lubricante vacio por setters", () -> mecanico.setTipoLubricante(""));
@@ -38,5 +40,7 @@ public class pruebaDominio {
             System.out.println("OK "+mensaje+" lanzo una excepcion: "+e.getMessage());
         }
     }
+
+    
     
 }
